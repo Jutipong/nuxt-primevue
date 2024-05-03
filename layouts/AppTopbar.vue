@@ -27,14 +27,12 @@ const onSettingsClick = () => {
 };
 
 const topbarMenuClasses = computed(() => {
-    debugger;
     return {
         'layout-topbar-menu-mobile-active': topbarMenuActive.value
     };
 });
 
 const bindOutsideClickListener = () => {
-    debugger;
     if (!outsideClickListener.value) {
         outsideClickListener.value = (event) => {
             if (isOutsideClicked(event)) {
@@ -47,7 +45,6 @@ const bindOutsideClickListener = () => {
 };
 
 const unbindOutsideClickListener = () => {
-    debugger;
     if (outsideClickListener.value) {
         document.removeEventListener('click', outsideClickListener.value);
         outsideClickListener.value = null;
@@ -55,7 +52,6 @@ const unbindOutsideClickListener = () => {
 };
 
 const isOutsideClicked = (event) => {
-    debugger;
     if (!topbarMenuActive.value) return;
     const sidebarEl = document.querySelector('.layout-topbar-menu');
     const topbarEl = document.querySelector('.layout-topbar-menu-button');

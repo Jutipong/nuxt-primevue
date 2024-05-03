@@ -1,7 +1,6 @@
 <script setup>
 import { useLayout } from '@/layouts/composables/layout';
 import { ref, computed } from 'vue';
-// import AppConfig from '@/layouts/AppConfig.vue';
 const { layoutConfig } = useLayout();
 const email = ref('');
 const password = ref('');
@@ -51,8 +50,6 @@ definePageMeta({
             </div>
         </div>
     </div>
-
-    <!-- <AppConfig simple /> -->
 </template>
 
 <style scoped>

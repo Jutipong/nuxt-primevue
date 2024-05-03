@@ -1,5 +1,4 @@
 <script setup>
-// import AppConfig from '@/layouts/AppConfig.vue';
 
 definePageMeta({
     layout: false
@@ -31,4 +30,4 @@ definePageMeta({
             </div>
         </div>
     </div>
-    <!-- <AppConfig simple /> --></template>
+</template>
