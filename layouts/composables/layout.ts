@@ -1,5 +1,3 @@
-import { toRefs, reactive, computed } from 'vue';
-
 const layoutConfig = reactive({
     ripple: true,
     darkTheme: false,
@@ -20,11 +18,11 @@ const layoutState = reactive({
 });
 
 export function useLayout() {
-    const setScale = (scale) => {
+    const setScale = (scale: any) => {
         layoutConfig.scale = scale;
     };
 
-    const setActiveMenuItem = (item) => {
+    const setActiveMenuItem = (item: any) => {
         layoutConfig.activeMenuItem = item.value || item;
     };
 

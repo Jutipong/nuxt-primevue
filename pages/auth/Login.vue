@@ -1,5 +1,5 @@
 <script setup>
-import { useLayout } from '@/layouts/composables/layout';
+import { useLayout } from '~/layouts/composables/layout';
 import { ref, computed } from 'vue';
 const { layoutConfig } = useLayout();
 const email = ref('');

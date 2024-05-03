@@ -34,7 +34,7 @@ const topbarMenuClasses = computed(() => {
 
 const bindOutsideClickListener = () => {
     if (!outsideClickListener.value) {
-        outsideClickListener.value = (event) => {
+        outsideClickListener.value = (event: any) => {
             if (isOutsideClicked(event)) {
                 topbarMenuActive.value = false;
             }
@@ -51,12 +51,12 @@ const unbindOutsideClickListener = () => {
     }
 };
 
-const isOutsideClicked = (event) => {
+const isOutsideClicked = (event: any) => {
     if (!topbarMenuActive.value) return;
     const sidebarEl = document.querySelector('.layout-topbar-menu');
     const topbarEl = document.querySelector('.layout-topbar-menu-button');
 
-    return !(sidebarEl.isSameNode(event.target) || sidebarEl.contains(event.target) || topbarEl.isSameNode(event.target) || topbarEl.contains(event.target));
+    return !(sidebarEl?.isSameNode(event.target) || sidebarEl?.contains(event.target) || topbarEl?.isSameNode(event.target) || topbarEl?.contains(event.target));
 };
 </script>
 
