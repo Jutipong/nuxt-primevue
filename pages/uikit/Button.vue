@@ -97,13 +97,13 @@ const load = (index) => {
             <div class="card">
                 <h5>Templating</h5>
                 <div class="flex flex-wrap gap-2">
-                    <Button type="button">
+                    <!-- <Button type="button">
                         <img alt="logo" src="/demo/images/logo-white.svg" style="width: 1.5rem" />
                     </Button>
                     <Button type="button" outlined severity="success">
                         <img alt="logo" src="/demo/images/logo.svg" style="width: 1.5rem" />
                         <span class="ml-2 text-bold">PrimeVue</span>
-                    </Button>
+                    </Button> -->
                 </div>
             </div>
         </div>
@@ -175,8 +175,10 @@ const load = (index) => {
 
             <div class="card">
                 <h5>Loading</h5>
-                <Button type="button" class="mr-2 mb-2" label="Search" icon="pi pi-search" :loading="loading[0]" @click="load(0)" />
-                <Button type="button" class="mr-2 mb-2" label="Search" icon="pi pi-search" iconPos="right" :loading="loading[1]" @click="load(1)" />
+                <Button type="button" class="mr-2 mb-2" label="Search" icon="pi pi-search" :loading="loading[0]"
+                    @click="load(0)" />
+                <Button type="button" class="mr-2 mb-2" label="Search" icon="pi pi-search" iconPos="right"
+                    :loading="loading[1]" @click="load(1)" />
                 <Button type="button" class="mr-2 mb-2" icon="pi pi-search" :loading="loading[2]" @click="load(2)" />
                 <Button type="button" class="mr-2 mb-2" label="Search" :loading="loading[3]" @click="load(3)" />
             </div>

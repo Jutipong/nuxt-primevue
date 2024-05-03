@@ -25,7 +25,6 @@ const model = ref([
             { label: 'Message', icon: 'pi pi-fw pi-comment', to: '/uikit/messages' },
             { label: 'File', icon: 'pi pi-fw pi-file', to: '/uikit/file' },
             { label: 'Chart', icon: 'pi pi-fw pi-chart-bar', to: '/uikit/chart' },
-            { label: 'Misc', icon: 'pi pi-fw pi-circle', to: '/uikit/misc' }
         ]
     },
 ]);
