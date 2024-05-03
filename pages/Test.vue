@@ -1,11 +1,10 @@
-<template>
-  <div>
-    <h1>TEST</h1>
-  </div>
-</template>
-
-<script lang="ts" setup>
+<script setup lang="ts">
 
 </script>
 
-<style></style>
+<template>
+  <div>
+    <TestCom1 />
+    <VInputNumber />
+  </div>
+</template>
