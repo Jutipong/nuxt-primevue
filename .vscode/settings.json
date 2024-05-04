@@ -2,28 +2,13 @@
  // -----------------------------------
  // ---------- ESlint Config ----------
  // -----------------------------------
-"[jsonc]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
 
  // Enable the ESlint flat config support
   "eslint.experimental.useFlatConfig": true,
 
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
 
   // Auto fix
   "editor.codeActionsOnSave": {
@@ -155,6 +140,40 @@
   },
  // -----------------------------------
  // ---------- End fileNesting --------
+ // -----------------------------------
+
+
+ // -----------------------------------
+ // ---------- Vs Code Config ---------
+ // -----------------------------------
+  "editor.fontLigatures": true,
+  "editor.smoothScrolling": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.cursorBlinking": "expand",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "vue.splitEditors.icon": true,
+  "editor.minimap.enabled": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "workbench.tree.indent": 10,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Simple Dark",
+ // -----------------------------------
+ // ---------End Vs Code Config -------
  // -----------------------------------
 
 
