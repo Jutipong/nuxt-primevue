@@ -4,8 +4,11 @@ export default antfu(
   {
     vue: true,
     typescript: true,
-        stylistic: {
+
+  stylistic: {
       indent: 2,
+      quotes: 'single',
+      semi: false,
       overrides: {
         // 'no-console': 'off'
         // 'no-debugger': false,
@@ -24,4 +27,4 @@ export default antfu(
       markdown: 'prettier',
     },
   },
-)
+);
