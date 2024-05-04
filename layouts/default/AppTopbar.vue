@@ -22,11 +22,6 @@ const logoUrl = computed(() => {
 //     topbarMenuActive.value = !topbarMenuActive.value;
 // };
 
-function onSettingsClick() {
-  topbarMenuActive.value = false
-  router.push('/utilities/documentation')
-}
-
 const topbarMenuClasses = computed(() => {
   return {
     'layout-topbar-menu-mobile-active': topbarMenuActive.value,
@@ -59,6 +54,9 @@ function isOutsideClicked(event: any) {
 
   return !(sidebarEl?.isSameNode(event.target) || sidebarEl?.contains(event.target) || topbarEl?.isSameNode(event.target) || topbarEl?.contains(event.target))
 }
+function logout() {
+  router.push('/login')
+}
 </script>
 
 <template>
@@ -85,7 +83,7 @@ function isOutsideClicked(event: any) {
                 <i class="pi pi-user"></i>
                 <span>Profile</span>
             </button> -->
-      <button class="p-link layout-topbar-button" @click="onSettingsClick()">
+      <button class="p-link layout-topbar-button" @click="logout">
         <i class="pi pi-sign-out" />
         <span>Logout</span>
       </button>
