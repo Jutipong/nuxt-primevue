@@ -11,9 +11,9 @@ const outsideClickListener = ref(null);
 
 watch(isSidebarActive, (newVal) => {
     if (newVal) {
-        // bindOutsideClickListener();
+        bindOutsideClickListener();
     } else {
-        // unbindOutsideClickListener();
+        unbindOutsideClickListener();
     }
 });
 
@@ -29,30 +29,30 @@ const containerClass = computed(() => {
         'p-ripple-disabled': layoutConfig.ripple.value === false
     };
 });
-// const bindOutsideClickListener = () => {
-//     if (!outsideClickListener.value) {
-//         outsideClickListener.value = (event) => {
-//             if (isOutsideClicked(event)) {
-//                 layoutState.overlayMenuActive.value = false;
-//                 layoutState.staticMenuMobileActive.value = false;
-//                 layoutState.menuHoverActive.value = false;
-//             }
-//         };
-//         document.addEventListener('click', outsideClickListener.value);
-//     }
-// };
-// const unbindOutsideClickListener = () => {
-//     if (outsideClickListener.value) {
-//         document.removeEventListener('click', outsideClickListener);
-//         outsideClickListener.value = null;
-//     }
-// };
-// const isOutsideClicked = (event) => {
-//     const sidebarEl = document.querySelector('.layout-sidebar');
-//     const topbarEl = document.querySelector('.layout-menu-button');
+const bindOutsideClickListener = () => {
+    if (!outsideClickListener.value) {
+        outsideClickListener.value = (event) => {
+            if (isOutsideClicked(event)) {
+                layoutState.overlayMenuActive.value = false;
+                layoutState.staticMenuMobileActive.value = false;
+                layoutState.menuHoverActive.value = false;
+            }
+        };
+        document.addEventListener('click', outsideClickListener.value);
+    }
+};
+const unbindOutsideClickListener = () => {
+    if (outsideClickListener.value) {
+        document.removeEventListener('click', outsideClickListener);
+        outsideClickListener.value = null;
+    }
+};
+const isOutsideClicked = (event) => {
+    const sidebarEl = document.querySelector('.layout-sidebar');
+    const topbarEl = document.querySelector('.layout-menu-button');
 
-//     return !(sidebarEl.isSameNode(event.target) || sidebarEl.contains(event.target) || topbarEl.isSameNode(event.target) || topbarEl.contains(event.target));
-// };
+    return !(sidebarEl.isSameNode(event.target) || sidebarEl.contains(event.target) || topbarEl.isSameNode(event.target) || topbarEl.contains(event.target));
+};
 </script>
 
 <template>
@@ -63,7 +63,6 @@ const containerClass = computed(() => {
         </div>
         <div class="layout-main-container">
             <div class="layout-main">
-                <!-- <router-view></router-view> -->
                 <NuxtPage />
             </div>
             <app-footer></app-footer>
