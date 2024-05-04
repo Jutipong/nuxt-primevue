@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
-import { useLayout } from './composables/layout';
+import { useLayout } from '../composables/layout';
 import { useRouter } from 'vue-router';
 const { layoutConfig, onMenuToggle } = useLayout();
 const outsideClickListener = ref<any>(null);
