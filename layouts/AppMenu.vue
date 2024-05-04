@@ -20,7 +20,6 @@ const model = ref([
                 to: '/uikit/button',
                 class: 'rotated-icon'
             },
-            { label: 'Tree', icon: 'pi pi-fw pi-share-alt', to: '/uikit/tree' },
             { label: 'Panel', icon: 'pi pi-fw pi-tablet', to: '/uikit/panels' },
             { label: 'Message', icon: 'pi pi-fw pi-comment', to: '/uikit/messages' },
             { label: 'File', icon: 'pi pi-fw pi-file', to: '/uikit/file' },
