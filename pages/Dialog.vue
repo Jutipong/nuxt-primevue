@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 
 const visible1 = ref(false)
@@ -6,7 +6,7 @@ const visible1 = ref(false)
 const position = ref('center')
 const visible = ref(false)
 
-function openPosition(pos) {
+function openPosition(pos: any) {
   position.value = pos
   visible.value = true
 }

@@ -25,6 +25,7 @@ const model = ref([
       { label: 'Message', icon: 'pi pi-fw pi-comment', to: '/uikit/messages' },
       { label: 'File', icon: 'pi pi-fw pi-file', to: '/uikit/file' },
       { label: 'Dialog', icon: 'pi pi-fw pi-file', to: '/dialog' },
+      { label: 'ConfirmDialog', icon: 'pi pi-fw pi-file', to: '/ConfirmDialog' },
     ],
   },
 ])
