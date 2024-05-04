@@ -1,4 +1,4 @@
-export const NodeService = {
+export default  NodeService = {
     getTreeNodesData() {
         return [
             {

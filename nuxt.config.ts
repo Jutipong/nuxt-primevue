@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   primevue: {
     options: { ripple: true },
     components: {
-      exclude: ['Editor', 'ColorPicker', 'Galleria']
+      exclude: ['Editor', 'ColorPicker', 'Galleria', 'Chart']
     },
   },
   css: ['primeicons/primeicons.css', 'primeflex/primeflex.scss', 'primevue/resources/primevue.min.css', '@/assets/styles.scss']

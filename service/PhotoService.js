@@ -1,4 +1,4 @@
-export const PhotoService = {
+export default PhotoService = {
     getData() {
         return [
             {

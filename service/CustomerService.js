@@ -1,4 +1,4 @@
-export const CustomerService = {
+export default CustomerService = {
     getData() {
         return [
             {

@@ -1,4 +1,4 @@
-export const CountryService = {
+export default CountryService = {
     getData() {
         return [
             { name: 'Afghanistan', code: 'AF' },

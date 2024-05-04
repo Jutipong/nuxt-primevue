@@ -1,7 +1,7 @@
 let icons = [];
 let selectedIcon = null;
 
-export const IconService = {
+export default IconService = {
     // getIcons() {
     //     return fetch('/demo/data/icons.json', { headers: { 'Cache-Control': 'no-cache' } })
     //         .then((res) => res.json())
