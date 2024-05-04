@@ -26,6 +26,7 @@ const model = ref([
       { label: 'File', icon: 'pi pi-fw pi-file', to: '/uikit/file' },
       { label: 'Dialog', icon: 'pi pi-fw pi-file', to: '/dialog' },
       { label: 'ConfirmDialog', icon: 'pi pi-fw pi-file', to: '/ConfirmDialog' },
+      { label: 'ConfirmPopup', icon: 'pi pi-fw pi-file', to: '/ConfirmPopup' },
     ],
   },
 ])
