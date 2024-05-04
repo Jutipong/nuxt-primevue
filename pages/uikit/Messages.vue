@@ -9,14 +9,20 @@ const email = ref(null)
 const count = ref(0)
 
 function addMessage(type) {
-  if (type === 'success')
-    message.value = [{ severity: 'success', detail: 'Success Message', content: 'Message sent', id: count.value++ }]
-  else if (type === 'info')
-    message.value = [{ severity: 'info', detail: 'Info Message', content: 'PrimeVue rocks', id: count.value++ }]
-  else if (type === 'warn')
-    message.value = [{ severity: 'warn', detail: 'Warn Message', content: 'There are unsaved changes', id: count.value++ }]
-  else if (type === 'error')
-    message.value = [{ severity: 'error', detail: 'Error Message', content: 'Validation failed', id: count.value++ }]
+  switch (type) {
+    case 'success':
+      message.value = [{ severity: 'success', detail: 'Success Message', content: 'Message sent', id: count.value++ }]
+      break
+    case 'info':
+      message.value = [{ severity: 'info', detail: 'Info Message', content: 'PrimeVue rocks', id: count.value++ }]
+      break
+    case 'warn':
+      message.value = [{ severity: 'warn', detail: 'Warn Message', content: 'There are unsaved changes', id: count.value++ }]
+      break
+    case 'error':
+      message.value = [{ severity: 'error', detail: 'Error Message', content: 'Validation failed', id: count.value++ }]
+      break
+  }
 }
 
 function showSuccess() {
@@ -41,7 +47,6 @@ function showError() {
     <div class="col-12 lg:col-6">
       <div class="card">
         <h5>Toast</h5>
-
         <Toast />
         <Button label="Success" class="p-button-success mr-2" @click="showSuccess()" />
         <Button label="Info" class="p-button-info mr-2" @click="showInfo()" />
