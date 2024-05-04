@@ -1,75 +1,72 @@
 <script setup>
-import { computed, watch, ref } from 'vue';
-import AppTopbar from '@/layouts/default/AppTopbar.vue';
-import AppFooter from '@/layouts/default/AppFooter.vue';
-import AppSidebar from '@/layouts/default/AppSidebar.vue';
-import { useLayout } from '@/layouts/composables/layout';
+import { computed, ref, watch } from 'vue'
+import AppTopbar from '@/layouts/default/AppTopbar.vue'
+import AppFooter from '@/layouts/default/AppFooter.vue'
+import AppSidebar from '@/layouts/default/AppSidebar.vue'
+import { useLayout } from '@/layouts/composables/layout'
 
-const { layoutConfig, layoutState, isSidebarActive } = useLayout();
+const { layoutConfig, layoutState, isSidebarActive } = useLayout()
 
-const outsideClickListener = ref(null);
+const outsideClickListener = ref(null)
 
 watch(isSidebarActive, (newVal) => {
-    if (newVal) {
-        bindOutsideClickListener();
-    } else {
-        unbindOutsideClickListener();
-    }
-});
+  if (newVal)
+    bindOutsideClickListener()
+  else
+    unbindOutsideClickListener()
+})
 
 const containerClass = computed(() => {
-    return {
-        'layout-theme-light': layoutConfig.darkTheme.value === 'light',
-        'layout-theme-dark': layoutConfig.darkTheme.value === 'dark',
-        'layout-overlay': layoutConfig.menuMode.value === 'overlay',
-        'layout-static': layoutConfig.menuMode.value === 'static',
-        'layout-static-inactive': layoutState.staticMenuDesktopInactive.value && layoutConfig.menuMode.value === 'static',
-        'layout-overlay-active': layoutState.overlayMenuActive.value,
-        'layout-mobile-active': layoutState.staticMenuMobileActive.value,
-        'p-ripple-disabled': layoutConfig.ripple.value === false
-    };
-});
-const bindOutsideClickListener = () => {
-    if (!outsideClickListener.value) {
-        outsideClickListener.value = (event) => {
-            if (isOutsideClicked(event)) {
-                layoutState.overlayMenuActive.value = false;
-                layoutState.staticMenuMobileActive.value = false;
-                layoutState.menuHoverActive.value = false;
-            }
-        };
-        document.addEventListener('click', outsideClickListener.value);
+  return {
+    'layout-theme-light': layoutConfig.darkTheme.value === 'light',
+    'layout-theme-dark': layoutConfig.darkTheme.value === 'dark',
+    'layout-overlay': layoutConfig.menuMode.value === 'overlay',
+    'layout-static': layoutConfig.menuMode.value === 'static',
+    'layout-static-inactive': layoutState.staticMenuDesktopInactive.value && layoutConfig.menuMode.value === 'static',
+    'layout-overlay-active': layoutState.overlayMenuActive.value,
+    'layout-mobile-active': layoutState.staticMenuMobileActive.value,
+    'p-ripple-disabled': layoutConfig.ripple.value === false,
+  }
+})
+function bindOutsideClickListener() {
+  if (!outsideClickListener.value) {
+    outsideClickListener.value = (event) => {
+      if (isOutsideClicked(event)) {
+        layoutState.overlayMenuActive.value = false
+        layoutState.staticMenuMobileActive.value = false
+        layoutState.menuHoverActive.value = false
+      }
     }
-};
-const unbindOutsideClickListener = () => {
-    if (outsideClickListener.value) {
-        document.removeEventListener('click', outsideClickListener);
-        outsideClickListener.value = null;
-    }
-};
-const isOutsideClicked = (event) => {
-    const sidebarEl = document.querySelector('.layout-sidebar');
-    const topbarEl = document.querySelector('.layout-menu-button');
+    document.addEventListener('click', outsideClickListener.value)
+  }
+}
+function unbindOutsideClickListener() {
+  if (outsideClickListener.value) {
+    document.removeEventListener('click', outsideClickListener)
+    outsideClickListener.value = null
+  }
+}
+function isOutsideClicked(event) {
+  const sidebarEl = document.querySelector('.layout-sidebar')
+  const topbarEl = document.querySelector('.layout-menu-button')
 
-    return !(sidebarEl.isSameNode(event.target) || sidebarEl.contains(event.target) || topbarEl.isSameNode(event.target) || topbarEl.contains(event.target));
-};
+  return !(sidebarEl.isSameNode(event.target) || sidebarEl.contains(event.target) || topbarEl.isSameNode(event.target) || topbarEl.contains(event.target))
+}
 </script>
 
 <template>
-    <div class="layout-wrapper" :class="containerClass">
-        <AppTopbar></AppTopbar>
-        <div class="layout-sidebar">
-            <AppSidebar></AppSidebar>
-        </div>
-        <div class="layout-main-container">
-            <div class="layout-main">
-                <slot />
-            </div>
-            <AppFooter></AppFooter>
-        </div>
-        <div class="layout-mask"></div>
+  <div class="layout-wrapper" :class="containerClass">
+    <AppTopbar />
+    <div class="layout-sidebar">
+      <AppSidebar />
     </div>
-    <Toast />
+    <div class="layout-main-container">
+      <div class="layout-main">
+        <slot />
+      </div>
+      <AppFooter />
+    </div>
+    <div class="layout-mask" />
+  </div>
+  <Toast />
 </template>
-
-<style lang="scss" scoped></style>

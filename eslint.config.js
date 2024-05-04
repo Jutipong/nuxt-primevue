@@ -5,7 +5,7 @@ export default antfu(
     vue: true,
     typescript: true,
 
-  stylistic: {
+    stylistic: {
       indent: 2,
       quotes: 'single',
       semi: false,
@@ -27,4 +27,4 @@ export default antfu(
       markdown: 'prettier',
     },
   },
-);
+)
