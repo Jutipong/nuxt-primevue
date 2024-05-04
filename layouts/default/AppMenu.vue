@@ -24,6 +24,7 @@ const model = ref([
       { label: 'Panel', icon: 'pi pi-fw pi-tablet', to: '/uikit/panels' },
       { label: 'Message', icon: 'pi pi-fw pi-comment', to: '/uikit/messages' },
       { label: 'File', icon: 'pi pi-fw pi-file', to: '/uikit/file' },
+      { label: 'Dialog', icon: 'pi pi-fw pi-file', to: '/dialog' },
     ],
   },
 ])
