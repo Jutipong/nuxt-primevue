@@ -60,7 +60,7 @@ function logout(event: any) {
   confirm.require({
     target: event.currentTarget,
     group: 'confirm-logout',
-    icon: 'pi pi-exclamation-circle',
+    icon: 'pi pi-sign-out',
     acceptIcon: 'pi pi-check ',
     rejectIcon: 'pi pi-times',
     acceptLabel: 'Confirm',
@@ -100,18 +100,7 @@ function logout(event: any) {
     </button>
 
     <div class="layout-topbar-menu" :class="topbarMenuClasses">
-      <!-- <button @click="onTopBarMenuButton()" class="p-link layout-topbar-button">
-                <i class="pi pi-calendar"></i>
-                <span>Calendar</span>
-            </button>
-            <button @click="onTopBarMenuButton()" class="p-link layout-topbar-button">
-                <i class="pi pi-user"></i>
-                <span>Profile</span>
-            </button> -->
-      <button class="p-link layout-topbar-button" @click="logout($event)">
-        <i class="pi pi-sign-out" />
-        <span>Logout</span>
-      </button>
+      <Button outlined severity="danger" icon="pi pi-sign-out" label="Logout" @click="logout($event)" />
     </div>
   </div>
 </template>
