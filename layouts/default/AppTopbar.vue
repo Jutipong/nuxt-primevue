@@ -65,8 +65,8 @@ function logout(event: any) {
     rejectIcon: 'pi pi-times',
     acceptLabel: 'Confirm',
     rejectLabel: 'Cancel',
-    rejectClass: 'p-button-secondary p-button-outlined p-button-sm',
-    acceptClass: 'p-button-danger p-button-sm',
+    rejectClass: 'p-button-secondary p-button-outlined p-button-sm w-8rem',
+    acceptClass: 'p-button-danger p-button-sm w-8rem',
     message: 'Are you sure you want to logout?',
     accept: () => router.push('/login'),
   })
@@ -75,7 +75,6 @@ function logout(event: any) {
 
 <template>
   <div class="layout-topbar">
-    <!-- <ConfirmPopup /> -->
     <ConfirmPopup group="confirm-logout">
       <template #message="slotProps">
         <div class="flex flex-column align-items-center w-full gap-3 border-bottom-1 surface-border p-3 mb-3 pb-0">
