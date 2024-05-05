@@ -80,10 +80,13 @@ function logout(event: any) {
       <template #message="slotProps">
         <div class="flex flex-column align-items-center w-full gap-3 border-bottom-1 surface-border p-3 mb-3 pb-0">
           <i :class="slotProps.message.icon" class="text-5xl text-red-500" />
-          <p>{{ slotProps.message.message }}</p>
+          <p class="pb-2">
+            {{ slotProps.message.message }}
+          </p>
         </div>
       </template>
     </ConfirmPopup>
+
     <router-link to="/" class="layout-topbar-logo">
       <img :src="logoUrl" alt="logo">
       <span>SAKAI</span>
