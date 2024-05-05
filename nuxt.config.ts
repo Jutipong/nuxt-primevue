@@ -21,6 +21,7 @@ export default defineNuxtConfig({
     options: { ripple: true },
     components: {
       exclude: ['Editor', 'ColorPicker', 'Galleria', 'Chart'],
+
     },
   },
   css: [

@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "streetsidesoftware.code-spell-checker",
+    "naumovs.color-highlight",
+    "dbaeumer.vscode-eslint",
+    "antfu.file-nesting",
+    "antfu.goto-alias",
+    "chrisbibby.hide-node-modules",
+    "akamud.vscode-javascript-snippet-pack",
+    "idered.npm",
+    "nuxtr.nuxtr-vscode",
+    "yigitfindikli.primeflexsnippets",
+    "antfu.unocss",
+    "vue.volar",
+    "travis.simple-dark",
+    "pkief.material-icon-theme"
+  ]
+}
