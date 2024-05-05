@@ -7,6 +7,7 @@ const { layoutConfig, onMenuToggle } = useLayout()
 const outsideClickListener = ref<any>(null)
 const topbarMenuActive = ref(false)
 const router = useRouter()
+const confirm = useConfirm()
 
 onMounted(() => {
   bindOutsideClickListener()
@@ -54,13 +55,35 @@ function isOutsideClicked(event: any) {
 
   return !(sidebarEl?.isSameNode(event.target) || sidebarEl?.contains(event.target) || topbarEl?.isSameNode(event.target) || topbarEl?.contains(event.target))
 }
-function logout() {
-  router.push('/login')
+
+function logout(event: any) {
+  confirm.require({
+    target: event.currentTarget,
+    group: 'confirm-logout',
+    icon: 'pi pi-exclamation-circle',
+    acceptIcon: 'pi pi-check ',
+    rejectIcon: 'pi pi-times',
+    acceptLabel: 'Confirm',
+    rejectLabel: 'Cancel',
+    rejectClass: 'p-button-secondary p-button-outlined p-button-sm',
+    acceptClass: 'p-button-danger p-button-sm',
+    message: 'Are you sure you want to logout?',
+    accept: () => router.push('/login'),
+  })
 }
 </script>
 
 <template>
   <div class="layout-topbar">
+    <!-- <ConfirmPopup /> -->
+    <ConfirmPopup group="confirm-logout">
+      <template #message="slotProps">
+        <div class="flex flex-column align-items-center w-full gap-3 border-bottom-1 surface-border p-3 mb-3 pb-0">
+          <i :class="slotProps.message.icon" class="text-5xl text-red-500" />
+          <p>{{ slotProps.message.message }}</p>
+        </div>
+      </template>
+    </ConfirmPopup>
     <router-link to="/" class="layout-topbar-logo">
       <img :src="logoUrl" alt="logo">
       <span>SAKAI</span>
@@ -83,7 +106,7 @@ function logout() {
                 <i class="pi pi-user"></i>
                 <span>Profile</span>
             </button> -->
-      <button class="p-link layout-topbar-button" @click="logout">
+      <button class="p-link layout-topbar-button" @click="logout($event)">
         <i class="pi pi-sign-out" />
         <span>Logout</span>
       </button>
