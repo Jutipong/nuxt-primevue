@@ -170,6 +170,10 @@
   "workbench.tree.indent": 10,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Simple Dark",
+  "vue.inlayHints.inlineHandlerLeading": true,
+  "vue.inlayHints.vBindShorthand": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": true,
+  "eslint.format.enable": true,
   // -----------------------------------
   // ---------End Vs Code Config -------
   // -----------------------------------
