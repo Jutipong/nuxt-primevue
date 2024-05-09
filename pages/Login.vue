@@ -1,16 +1,11 @@
 <script setup>
-import { computed, ref } from 'vue'
-import { useLayout } from '~/layouts/composables/layout'
-
 const router = useRouter()
 
-const { layoutConfig } = useLayout()
-
-definePageMeta({ layout: false })
+definePageMeta({ layout: 'empty' })
 
 const email = ref('')
 const password = ref('')
-const logoUrl = computed(() => `/images/${layoutConfig.darkTheme.value ? 'logo-white' : 'logo-dark'}.svg`)
+const logoUrl = '/images/logo-dark.svg'
 
 function login() {
   router.push('/')
@@ -18,7 +13,7 @@ function login() {
 </script>
 
 <template>
-  <div class="surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden">
+  <form class="surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden" @submit.prevent="login">
     <div class="flex flex-column align-items-center justify-content-center">
       <div style="border-radius: 56px; padding: 0.3rem;">
         <div class="w-full surface-card py-8 px-5 sm:px-8" style="border-radius: 12px">
@@ -34,44 +29,27 @@ function login() {
           </div>
 
           <div>
-            <label for="email1" class="block text-900 text-xl font-medium mb-2">Email</label>
-            <InputText
-              id="email1"
-              v-model="email"
-              type="text"
-              placeholder="Email address"
-              class="w-full md:w-30rem mb-5"
-              style="padding: 1rem"
-            />
+            <InputGroup class="mb-3 full-w md:w-20rem">
+              <InputGroupAddon>
+                <i class="pi pi-user" />
+              </InputGroupAddon>
+              <InputText v-model="email" placeholder="Username" />
+            </InputGroup>
 
-            <label for="password1" class="block text-900 font-medium text-xl mb-2">Password</label>
+            <InputGroup class="mb-3 w-ful3 md:w-20rem">
+              <InputGroupAddon>
+                <i class="pi pi-eye" />
+              </InputGroupAddon>
+              <InputText v-model="password" placeholder="Username" />
+            </InputGroup>
 
-            <Password
-              id="password1"
-              v-model="password"
-              placeholder="Password"
-              :toggle-mask="true"
-              class="w-full mb-3"
-              input-class="w-full"
-              :input-style="{ padding: '1rem' }"
-            />
-
-            <Button label="Sign In" class="w-full p-3 text-xl" @click="login" />
+            <Button type="submit" label="Login" class="mb-3 w-20rem" @click="login" />
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </form>
 </template>
 
 <style scoped>
-.pi-eye {
-  transform: scale(1.6);
-  margin-right: 1rem;
-}
-
-.pi-eye-slash {
-  transform: scale(1.6);
-  margin-right: 1rem;
-}
 </style>
