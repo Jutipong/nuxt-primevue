@@ -11,11 +11,13 @@ import {
 
 export default defineConfig({
   shortcuts: {
-    grid: 'flex flex-wrap mr-1 ml-1',
+    grid: 'flex flex-wrap mr-0 ml-0',
   },
   rules: [
     [/^m-(\d+)$/, ([, d]) => ({ margin: `${Number(d) / 4}rem` })],
     [/^p-(\d+)$/, match => ({ padding: `${Number(match[1]) / 4}rem` })],
+    [/^col-(\d+)$/, ([, d]) => ({ flex: '0 0 auto', padding: '0.5rem', width: `${(Number(d) / 12) * 100}%` })],
+    [/^md:col-(\d+)$/, ([, d]) => ({ flex: '0 0 auto', padding: '0.5rem', width: `${(Number(d) / 12) * 100}%` })],
   ],
   presets: [
     presetUno(),
