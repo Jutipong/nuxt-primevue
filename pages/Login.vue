@@ -29,14 +29,14 @@ function login() {
           </div>
 
           <div>
-            <InputGroup class="mb-3 full-w md:w-20rem">
+            <InputGroup class="mb-3 w-full md:w-20rem">
               <InputGroupAddon>
                 <i class="pi pi-user" />
               </InputGroupAddon>
               <InputText v-model="email" placeholder="Username" />
             </InputGroup>
 
-            <InputGroup class="mb-3 w-ful3 md:w-20rem">
+            <InputGroup class="mb-3 w-full md:w-20rem">
               <InputGroupAddon>
                 <i class="pi pi-eye" />
               </InputGroupAddon>
