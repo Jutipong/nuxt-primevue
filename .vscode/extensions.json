@@ -10,6 +10,7 @@
     "yigitfindikli.primeflexsnippets",
     "vue.volar",
     "travis.simple-dark",
-    "pkief.material-icon-theme"
+    "pkief.material-icon-theme",
+    "antfu.unocss"
   ]
 }
