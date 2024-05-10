@@ -11,7 +11,7 @@ import {
 
 export default defineConfig({
   shortcuts: {
-    grid: 'flex flex-wrap mr-0 ml-0',
+    grid: 'flex flex-wrap mr-0 ml-0 mt--0.5rem',
   },
   rules: [
     [/^m-(\d+)$/, ([, d]) => ({ margin: `${Number(d) / 4}rem` })],
