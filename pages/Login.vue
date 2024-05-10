@@ -43,13 +43,7 @@ function login() {
               <InputText v-model="password" placeholder="Username" />
             </InputGroup>
 
-            <Button
-              type="submit"
-              label="Login"
-              class="mb-3 w-20rem"
-              border="color-red size-8"
-              @click="login"
-            />
+            <Button type="submit" label="Login" w-full @click="login" />
           </div>
         </div>
       </div>
