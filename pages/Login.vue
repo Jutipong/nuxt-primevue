@@ -20,10 +20,10 @@ function login() {
           <div class="text-center mb-5">
             <img :src="logoUrl" alt="Sakai logo" class="mb-5 w-6rem flex-shrink-0">
 
-            <div class="text-900 text-3xl font-medium mb-3">
+            <div class=" text-3xl font-medium mb-3">
               Welcome, Isabel!
             </div>
-            <span class="text-600 font-medium">
+            <span class="font-medium0">
               Sign in to continue
             </span>
           </div>
@@ -43,7 +43,14 @@ function login() {
               <InputText v-model="password" placeholder="Username" />
             </InputGroup>
 
-            <Button type="submit" label="Login" class="mb-3 w-20rem" @click="login" />
+            <Button
+              type="submit"
+              label="Login"
+              class="mb-3 w-20rem"
+              text-red-500 hover:text-green
+              flex
+              @click="login"
+            />
           </div>
         </div>
       </div>

@@ -12,6 +12,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@unocss/nuxt": "^0.60.0",
     "nuxt": "^3.11.2",
     "nuxt-primevue": "^0.3.1",
     "primeflex": "^3.3.1",

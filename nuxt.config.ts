@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   //   typeCheck: true
   // },
   devtools: { enabled: true },
-  modules: ['nuxt-primevue'],
+  modules: ['nuxt-primevue', '@unocss/nuxt'],
   primevue: {
     options: { ripple: true },
     components: {
