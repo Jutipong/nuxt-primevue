@@ -47,8 +47,7 @@ function login() {
               type="submit"
               label="Login"
               class="mb-3 w-20rem"
-              text-red-500 hover:text-green
-              flex
+              border="color-red size-8"
               @click="login"
             />
           </div>

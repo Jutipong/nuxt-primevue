@@ -2,7 +2,6 @@
   "recommendations": [
     "formulahendry.auto-rename-tag",
     "streetsidesoftware.code-spell-checker",
-    "naumovs.color-highlight",
     "dbaeumer.vscode-eslint",
     "antfu.file-nesting",
     "antfu.goto-alias",

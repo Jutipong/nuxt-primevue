@@ -5,23 +5,17 @@ import {
   presetIcons,
   presetTypography,
   presetUno,
-  presetWebFonts,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
 
 export default defineConfig({
   shortcuts: [
-    ['xxxx', 'px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'],
   ],
   rules: [
-    ['flex', { display: 'flex' }],
+    [/^m-(\d+)$/, ([, d]) => ({ margin: `${Number(d) / 4}rem` })],
+    [/^p-(\d+)$/, match => ({ padding: `${Number(match[1]) / 4}rem` })],
   ],
-  theme: {
-    colors: {
-      // ...
-    },
-  },
   presets: [
     presetUno(),
     presetAttributify(),
