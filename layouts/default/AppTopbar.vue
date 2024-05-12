@@ -100,7 +100,14 @@ function logout(event: any) {
     </button>
 
     <div class="layout-topbar-menu" :class="topbarMenuClasses">
-      <Button outlined severity="danger" icon="pi pi-sign-out" label="Logout" @click="logout($event)" />
+      <Button
+        hover="animate-shake-x animate-count-infinite animate-duration-4s"
+        outlined
+        severity="danger"
+        icon="pi pi-sign-out"
+        label="Logout"
+        @click="logout($event)"
+      />
     </div>
   </div>
 </template>

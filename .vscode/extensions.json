@@ -2,7 +2,6 @@
   "recommendations": [
     "formulahendry.auto-rename-tag",
     "streetsidesoftware.code-spell-checker",
-    "naumovs.color-highlight",
     "dbaeumer.vscode-eslint",
     "antfu.file-nesting",
     "antfu.goto-alias",
@@ -11,6 +10,7 @@
     "yigitfindikli.primeflexsnippets",
     "vue.volar",
     "travis.simple-dark",
-    "pkief.material-icon-theme"
+    "pkief.material-icon-theme",
+    "antfu.unocss"
   ]
 }

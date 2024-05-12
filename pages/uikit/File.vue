@@ -11,7 +11,7 @@ function onUpload() {
 <template>
   <div class="grid">
     <div class="col-12">
-      <div class="card">
+      <div class="card ">
         <h5>Advanced</h5>
         <FileUpload name="demo[]" :multiple="true" accept="image/*" :max-file-size="1000000" custom-upload @uploader="onUpload" />
 
