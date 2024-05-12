@@ -71,8 +71,13 @@ function isOutsideClicked(event) {
   <Toast />
 </template> -->
 
+<script setup>
+import Topbar from '@/layouts/default/Topbar.vue'
+</script>
+
 <template>
   <div class="layout-main">
+    <Topbar />
     <slot />
   </div>
 </template>
