@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { computed, ref, watch } from 'vue'
 import AppTopbar from '@/layouts/default/AppTopbar.vue'
 import AppFooter from '@/layouts/default/AppFooter.vue'
@@ -69,4 +69,10 @@ function isOutsideClicked(event) {
     <div class="layout-mask" />
   </div>
   <Toast />
+</template> -->
+
+<template>
+  <div class="layout-main">
+    <slot />
+  </div>
 </template>
