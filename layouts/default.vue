@@ -1,8 +1,7 @@
 <script setup>
-import { computed, ref, watch } from 'vue'
-import AppTopbar from '~/layouts/default/Topbar.vue'
-import AppFooter from '~/layouts/default/Footer.vue'
-import AppSidebar from '~/layouts/default/Sidebar.vue'
+import Topbar from '~/layouts/default/Topbar.vue'
+import Footer from '~/layouts/default/Footer.vue'
+import Sidebar from '~/layouts/default/Sidebar.vue'
 import { useLayout } from '@/layouts/composables/layout'
 
 const { layoutConfig, layoutState, isSidebarActive } = useLayout()
@@ -28,6 +27,7 @@ const containerClass = computed(() => {
     'p-ripple-disabled': layoutConfig.ripple.value === false,
   }
 })
+
 function bindOutsideClickListener() {
   if (!outsideClickListener.value) {
     outsideClickListener.value = (event) => {
@@ -40,31 +40,36 @@ function bindOutsideClickListener() {
     document.addEventListener('click', outsideClickListener.value)
   }
 }
+
 function unbindOutsideClickListener() {
   if (outsideClickListener.value) {
     document.removeEventListener('click', outsideClickListener)
     outsideClickListener.value = null
   }
 }
+
 function isOutsideClicked(event) {
   const sidebarEl = document.querySelector('.layout-sidebar')
   const topbarEl = document.querySelector('.layout-menu-button')
 
-  return !(sidebarEl.isSameNode(event.target) || sidebarEl.contains(event.target) || topbarEl.isSameNode(event.target) || topbarEl.contains(event.target))
+  return !(sidebarEl.isSameNode(event.target)
+    || sidebarEl.contains(event.target)
+    || topbarEl.isSameNode(event.target)
+    || topbarEl.contains(event.target))
 }
 </script>
 
 <template>
   <div class="layout-wrapper" :class="containerClass">
-    <AppTopbar />
+    <Topbar />
     <div class="layout-sidebar">
-      <AppSidebar />
+      <Sidebar />
     </div>
     <div class="layout-main-container">
       <div class="layout-main">
         <slot />
       </div>
-      <AppFooter />
+      <Footer />
     </div>
     <div class="layout-mask" />
   </div>

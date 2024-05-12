@@ -1,11 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue'
 import { useLayout } from '@/layouts/composables/layout'
 
 const { layoutConfig } = useLayout()
-const logoUrl = computed(() => {
-  return `/images/${layoutConfig.darkTheme.value ? 'logo-white' : 'logo-dark'}.svg`
-})
+const logoUrl = computed(() => `/images/${layoutConfig.darkTheme.value ? 'logo-white' : 'logo-dark'}.svg`)
 </script>
 
 <template>
@@ -15,5 +13,3 @@ const logoUrl = computed(() => {
     <span class="font-medium ml-2">PrimeVue</span>
   </div>
 </template>
-
-<style lang="scss" scoped></style>

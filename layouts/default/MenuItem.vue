@@ -41,7 +41,6 @@ watch(
 function itemClick(event, item) {
   if (item.disabled) {
     event.preventDefault()
-
     return
   }
 
@@ -82,7 +81,7 @@ function checkActiveRoute(item) {
       <i v-if="item.items" class="pi pi-fw pi-angle-down layout-submenu-toggler" />
     </a>
 
-    <RouterLink
+    <NuxtLink
       v-if="item.to && !item.items && item.visible !== false"
       tabindex="0"
       :class="[item.class, { 'active-route': checkActiveRoute(item) }]"
@@ -92,7 +91,7 @@ function checkActiveRoute(item) {
       <i :class="item.icon" class="layout-menuitem-icon" />
       <span class="layout-menuitem-text">{{ item.label }}</span>
       <i v-if="item.items" class="pi pi-fw pi-angle-down layout-submenu-toggler" />
-    </RouterLink>
+    </NuxtLink>
 
     <Transition v-if="item.items && item.visible !== false" name="layout-submenu">
       <ul v-show="root ? true : isActiveMenu" class="layout-submenu">

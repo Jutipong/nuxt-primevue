@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
-import { useRouter } from 'vue-router'
 import { useLayout } from '../composables/layout'
 
 const { layoutConfig, onMenuToggle, layoutState } = useLayout()
