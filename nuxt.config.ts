@@ -4,6 +4,11 @@ export default defineNuxtConfig({
       title: 'Nuxt PrimeVue',
       link: [
         {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico',
+        },
+        {
           id: 'theme-css',
           rel: 'stylesheet',
           type: 'text/css',
@@ -33,4 +38,11 @@ export default defineNuxtConfig({
     'primevue/resources/primevue.min.css',
     '@/assets/styles.scss',
   ],
+  build: {
+    transpile: ['nuxt', 'primevue'],
+  },
+  sourcemap: {
+    client: false,
+    server: true,
+  },
 })
