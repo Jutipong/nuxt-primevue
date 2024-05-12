@@ -3,6 +3,7 @@ export default defineNuxtConfig({
     head: {
       title: 'Nuxt PrimeVue',
       link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         // {
         //   id: 'theme-css',
         //   rel: 'stylesheet',
