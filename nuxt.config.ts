@@ -35,14 +35,10 @@ export default defineNuxtConfig({
   css: [
     'primeicons/primeicons.css',
     'primeflex/primeflex.scss',
-    'primevue/resources/primevue.min.css',
+    // 'primevue/resources/primevue.min.css',
     '@/assets/styles.scss',
   ],
   build: {
     transpile: ['nuxt', 'primevue'],
-  },
-  sourcemap: {
-    client: false,
-    server: true,
   },
 })
