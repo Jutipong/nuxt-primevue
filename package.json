@@ -12,7 +12,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@unocss/nuxt": "^0.60.0",
+    "@unocss/nuxt": "^0.60.1",
     "nuxt": "^3.11.2",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
@@ -21,6 +21,6 @@
     "@antfu/eslint-config": "^2.17.0",
     "eslint": "^9.2.0",
     "eslint-plugin-format": "^0.1.1",
-    "sass": "^1.77.0"
+    "sass": "1.77.1"
   }
 }
