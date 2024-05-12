@@ -3,7 +3,7 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useLayout } from '../composables/layout'
 
-const { layoutConfig, onMenuToggle } = useLayout()
+const { layoutConfig, onMenuToggle, layoutState } = useLayout()
 const outsideClickListener = ref<any>(null)
 const topbarMenuActive = ref(false)
 const router = useRouter()
@@ -17,6 +17,10 @@ onBeforeUnmount(() => {
 })
 const logoUrl = computed(() => {
   return `/images/${layoutConfig.darkTheme.value ? 'logo-white' : 'logo-dark'}.svg`
+})
+
+const iconTopbarMenu = computed(() => {
+  return layoutState.staticMenuDesktopInactive.value !== true ? 'i-ic:round-menu-open' : 'i-ic:round-menu'
 })
 
 // const onTopBarMenuButton = () => {
@@ -90,9 +94,11 @@ function logout(event: any) {
       <img :src="logoUrl" alt="logo">
       <span>SAKAI</span>
     </router-link>
-
-    <button class="p-link layout-menu-button layout-topbar-button" @click="onMenuToggle()">
+    <!-- <button class="p-link layout-menu-button layout-topbar-button" @click="onMenuToggle()">
       <i class="pi pi-bars" />
+    </button> -->
+    <button class="p-link layout-menu-button layout-topbar-button" @click="onMenuToggle()">
+      <div :class="iconTopbarMenu" />
     </button>
 
     <button class="p-link layout-topbar-menu-button layout-topbar-button">

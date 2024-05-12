@@ -27,7 +27,15 @@ export default defineConfig({
   presets: [
     presetUno(),
     presetAttributify(),
-    presetIcons(),
+    presetIcons({
+      customizations: {
+        iconCustomizer(collection, icon, props) {
+          props.width = '1.50em'
+          props.height = '1.50em'
+        },
+      },
+
+    }),
     presetTypography(),
   ],
   transformers: [
