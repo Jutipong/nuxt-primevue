@@ -1,6 +1,4 @@
 <script setup>
-import { onBeforeMount, ref, watch } from 'vue'
-import { useRoute } from 'vue-router'
 import { useLayout } from '@/layouts/composables/layout'
 
 const props = defineProps({
@@ -21,6 +19,7 @@ const props = defineProps({
     default: null,
   },
 })
+
 const route = useRoute()
 const { layoutConfig, layoutState, setActiveMenuItem, onMenuToggle } = useLayout()
 const isActiveMenu = ref(false)
@@ -69,31 +68,43 @@ function checkActiveRoute(item) {
     <div v-if="root && item.visible !== false" class="layout-menuitem-root-text">
       {{ item.label }}
     </div>
+
     <a
-      v-if="(!item.to || item.items) && item.visible !== false" :href="item.url"
-      :class="item.class" :target="item.target" tabindex="0" @click="itemClick($event, item, index)"
+      v-if="(!item.to || item.items) && item.visible !== false"
+      tabindex="0"
+      :href="item.url"
+      :class="item.class"
+      :target="item.target"
+      @click="itemClick($event, item, index)"
     >
       <i :class="item.icon" class="layout-menuitem-icon" />
       <span class="layout-menuitem-text">{{ item.label }}</span>
       <i v-if="item.items" class="pi pi-fw pi-angle-down layout-submenu-toggler" />
     </a>
+
     <RouterLink
-      v-if="item.to && !item.items && item.visible !== false" :class="[item.class, { 'active-route': checkActiveRoute(item) }]"
-      tabindex="0" :to="item.to" @click="itemClick($event, item, index)"
+      v-if="item.to && !item.items && item.visible !== false"
+      tabindex="0"
+      :class="[item.class, { 'active-route': checkActiveRoute(item) }]"
+      :to="item.to"
+      @click="itemClick($event, item, index)"
     >
       <i :class="item.icon" class="layout-menuitem-icon" />
       <span class="layout-menuitem-text">{{ item.label }}</span>
       <i v-if="item.items" class="pi pi-fw pi-angle-down layout-submenu-toggler" />
     </RouterLink>
+
     <Transition v-if="item.items && item.visible !== false" name="layout-submenu">
       <ul v-show="root ? true : isActiveMenu" class="layout-submenu">
-        <AppMenuItem
-          v-for="(child, i) in item.items" :key="child" :index="i" :item="child" :parent-item-key="itemKey"
+        <MenuItem
+          v-for="(child, i) in item.items"
+          :key="child"
+          :index="i"
+          :item="child"
+          :parent-item-key="itemKey"
           :root="false"
         />
       </ul>
     </Transition>
   </li>
 </template>
-
-<style lang="scss" scoped></style>
