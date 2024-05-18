@@ -8,7 +8,7 @@
             <Panel toggleable>
                 <template #header>
                     <div class="flex align-items-center gap-1">
-                        <Button class="p-button-sm" icon="i-mdi:magnify" severity="success" label="Search" outlined />
+                        <Button class="p-button-sm" icon="i-mdi:magnify" severity="primary" label="Search" outlined />
                     </div>
                 </template>
 
