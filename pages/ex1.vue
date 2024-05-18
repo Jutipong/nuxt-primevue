@@ -8,22 +8,27 @@
             <Panel toggleable>
                 <template #header>
                     <div class="flex align-items-center gap-1">
-                        <!-- <div class="i-ic:search" />
-                        <span class="font-bold">Amy Elsner</span> -->
                         <Button class="p-button-sm" icon="i-ic:search" severity="success" label="Search" outlined />
                     </div>
                 </template>
 
                 <template #default>
-                    <div class="p-fluid">
-                        <div class="formgrid grid">
-                            <div class="field col">
-                                <label for="name2">Name</label>
-                                <InputText id="name2" type="text" />
+                    <div class="row mt-1">
+                        <div class="col-12 md:col-6 lg:col-6">
+                            <div class="grid p-fluid field">
+                                <label for="name3" class="col-12 mb-2 md:col-2 md:mb-0">Name</label>
+                                <div class="col-12 md:col-10">
+                                    <InputText id="name3" type="text" />
+                                </div>
                             </div>
-                            <div class="field col">
-                                <label for="email2">Email</label>
-                                <InputText id="email2" type="text" />
+                        </div>
+
+                        <div class="col-12 md:col-6 lg:col-6">
+                            <div class="grid p-fluid field">
+                                <label for="email3" class="col-12 mb-2 md:col-2 md:mb-0">Email</label>
+                                <div class="col-12 md:col-10">
+                                    <InputText id="email3" type="text" />
+                                </div>
                             </div>
                         </div>
                     </div>
