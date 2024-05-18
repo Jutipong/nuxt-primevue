@@ -8,9 +8,12 @@
         "chrisbibby.hide-node-modules",
         "idered.npm",
         "yigitfindikli.primeflexsnippets",
-        "vue.volar",
         "travis.simple-dark",
         "pkief.material-icon-theme",
-        "antfu.unocss"
+        "antfu.unocss",
+        "yoavbls.pretty-ts-errors",
+        "antfu.iconify",
+        "nuxtr.nuxtr-vscode",
+        "vue.volar"
     ]
 }
