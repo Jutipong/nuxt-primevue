@@ -1,34 +1,32 @@
 {
-  "name": "nuxt-app",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  },
-  "dependencies": {
-    "@unocss/nuxt": "0.60.2",
-    "nuxt": "^3.11.2",
-    "nuxt-primevue": "^0.3.1",
-    "primeflex": "^3.3.1",
-    "primeicons": "^7.0.0",
-    "primevue": "^3.52.0",
-    "vue": "^3.4.27",
-    "vue-router": "^4.3.2"
-  },
-  "devDependencies": {
-    "@antfu/eslint-config": "2.18.1",
-    "@iconify-json/ci": "^1.1.13",
-    "@iconify-json/ic": "^1.1.17",
-    "@iconify-json/prime": "^1.1.12",
-    "@unocss/preset-icons": "^0.60.2",
-    "eslint": "9.3.0",
-    "eslint-plugin-format": "^0.1.1",
-    "sass": "1.77.2"
-  }
+    "name": "nuxt-app",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
+    },
+    "dependencies": {
+        "@unocss/nuxt": "0.60.2",
+        "nuxt": "^3.11.2",
+        "nuxt-primevue": "^0.3.1",
+        "primeflex": "^3.3.1",
+        "primeicons": "^7.0.0",
+        "primevue": "^3.52.0",
+        "vue": "^3.4.27",
+        "vue-router": "^4.3.2"
+    },
+    "devDependencies": {
+        "@antfu/eslint-config": "2.18.1",
+        "@iconify-json/ic": "^1.1.17",
+        "@unocss/preset-icons": "^0.60.2",
+        "eslint": "9.3.0",
+        "eslint-plugin-format": "^0.1.1",
+        "sass": "1.77.2"
+    }
 }

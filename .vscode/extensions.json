@@ -1,16 +1,16 @@
 {
-  "recommendations": [
-    "formulahendry.auto-rename-tag",
-    "streetsidesoftware.code-spell-checker",
-    "dbaeumer.vscode-eslint",
-    "antfu.file-nesting",
-    "antfu.goto-alias",
-    "chrisbibby.hide-node-modules",
-    "idered.npm",
-    "yigitfindikli.primeflexsnippets",
-    "vue.volar",
-    "travis.simple-dark",
-    "pkief.material-icon-theme",
-    "antfu.unocss"
-  ]
+    "recommendations": [
+        "formulahendry.auto-rename-tag",
+        "streetsidesoftware.code-spell-checker",
+        "dbaeumer.vscode-eslint",
+        "antfu.file-nesting",
+        "antfu.goto-alias",
+        "chrisbibby.hide-node-modules",
+        "idered.npm",
+        "yigitfindikli.primeflexsnippets",
+        "vue.volar",
+        "travis.simple-dark",
+        "pkief.material-icon-theme",
+        "antfu.unocss"
+    ]
 }

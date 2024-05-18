@@ -3,5 +3,5 @@ import AppMenu from './Menu.vue'
 </script>
 
 <template>
-  <AppMenu />
+    <AppMenu />
 </template>

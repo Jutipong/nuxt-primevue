@@ -1,11 +1,9 @@
 <script lang="ts" setup>
-
 </script>
 
 <template>
     <div>
-        <h1>Test Component 1</h1>
+        <h1>Example 1</h1>
+        <i class="i-ic:baseline-11mp" />
     </div>
 </template>
-
-<style></style>

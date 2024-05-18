@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div>
-    <h1>Input Number</h1>
-  </div>
+    <div>
+        <h1>Input Number</h1>
+    </div>
 </template>
 
 <style></style>
