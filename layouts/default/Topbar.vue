@@ -18,7 +18,7 @@ const logoUrl = computed(() => {
 })
 
 const iconTopbarMenu = computed(() => {
-    return layoutState.staticMenuDesktopInactive.value !== true ? 'i-ic:round-menu-open' : 'i-ic:round-menu'
+    return layoutState.staticMenuDesktopInactive.value !== true ? 'i-mdi:menu-open' : 'i-mdi:menu-close'
 })
 
 // const onTopBarMenuButton = () => {

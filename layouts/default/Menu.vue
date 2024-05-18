@@ -9,7 +9,7 @@ const model = ref([
     {
         label: 'Examples',
         items: [
-            { label: 'Ex 1', icon: 'i-ic:baseline-directions-run', to: '/ex1' },
+            { label: 'Ex 1', icon: 'i-mdi:run-fast', to: '/ex1' },
         ],
     },
     {
