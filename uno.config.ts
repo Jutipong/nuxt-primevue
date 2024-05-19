@@ -23,7 +23,7 @@ export default defineConfig({
         [/^col-auto$/, () => ({ flex: '0 0 auto' })],
 
         [/^col-(\d+)$/, ([, d]) => ({ flex: '0 0 auto', padding: '0.5rem', width: `${(Number(d) / 12) * 100}%` })],
-    // [/^md:col-(\d+)$/, ([, d]) => ({ flex: '0 0 auto', padding: '0.5rem', width: `${(Number(d) / 12) * 100}%` })],
+        // [/^md:col-(\d+)$/, ([, d]) => ({ flex: '0 0 auto', padding: '0.5rem', width: `${(Number(d) / 12) * 100}%` })],
     ],
     presets: [
         presetUno(),

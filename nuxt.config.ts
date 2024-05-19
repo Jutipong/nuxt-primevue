@@ -9,10 +9,16 @@ export default defineNuxtConfig({
                     href: '/favicon.ico',
                 },
                 {
-                    id: 'theme-css',
+                    id: 'theme',
                     rel: 'stylesheet',
                     type: 'text/css',
                     href: '/themes/aura-light-blue/theme.css',
+                },
+                {
+                    id: 'theme-custom',
+                    rel: 'stylesheet',
+                    type: 'text/css',
+                    href: '/themes/custom.css',
                 },
             ],
         },

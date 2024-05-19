@@ -16,7 +16,7 @@
                     <div class="row mt-1">
                         <div class="col-12 md:col-6 lg:col-6">
                             <div class="grid p-fluid field">
-                                <label for="name3" class="col-12 mb-2 md:col-2 md:mb-0">Name</label>
+                                <label for="name3" class="col-12 mb-2 md:col-2">Name</label>
                                 <div class="col-12 md:col-10">
                                     <InputText id="name3" type="text" />
                                 </div>
@@ -25,7 +25,7 @@
 
                         <div class="col-12 md:col-6 lg:col-6">
                             <div class="grid p-fluid field">
-                                <label for="email3" class="col-12 mb-2 md:col-2 md:mb-0">Email</label>
+                                <label for="email3" class="col-12 mb-2 md:col-2">Email</label>
                                 <div class="col-12 md:col-10">
                                     <InputText id="email3" type="text" />
                                 </div>
