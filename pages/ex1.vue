@@ -1,14 +1,25 @@
 <script lang="ts" setup>
+const toggleable = ref(true)
 
+function toggle() {
+    toggleable.value = !toggleable.value
+}
 </script>
 
 <template>
     <div class="grid">
         <div class="col-12">
-            <Panel toggleable>
+            <Panel toggleable :collapsed="toggleable">
                 <template #header>
                     <div class="flex align-items-center gap-1">
-                        <Button class="p-button-sm" icon="i-mdi:magnify" severity="primary" label="Search" outlined />
+                        <Button
+                            class="p-button-sm"
+                            icon="i-mdi:magnify"
+                            severity="primary"
+                            label="Search"
+                            :outlined="!toggleable"
+                            @click="toggle"
+                        />
                     </div>
                 </template>
 
