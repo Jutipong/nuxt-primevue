@@ -15,7 +15,7 @@ function toggle() {
 </script>
 
 <template>
-    <div class="grid">
+    <div class="row">
         <div class="col-12">
             <Panel toggleable :collapsed="toggleable" @toggle="toggle">
                 <template #header>
@@ -35,7 +35,7 @@ function toggle() {
                     <div class="row mt-1">
                         <div class="col-12 md:col-6 lg:col-6">
                             <div class="grid p-fluid field">
-                                <label for="name" class="col-12 mb-2 md:col-2">Name</label>
+                                <label for="name" class="col-12 md:col-2">Name</label>
                                 <div class="col-12 md:col-10">
                                     <InputText id="name" v-model="state.name" type="search" />
                                 </div>
@@ -44,7 +44,7 @@ function toggle() {
 
                         <div class="col-12 md:col-6 lg:col-6">
                             <div class="grid p-fluid field">
-                                <label for="statue" class="col-12 mb-2 md:col-2">Statue</label>
+                                <label for="statue" class="col-12 md:col-2">Statue</label>
                                 <div class="col-12 md:col-10">
                                     <Dropdown
                                         v-model="state.status"
