@@ -13,7 +13,7 @@ import {
 export default defineConfig({
     shortcuts: {
         grid: 'flex flex-wrap mr-0 ml-0 mt--0.5rem',
-        row: 'flex flex-wrap mr-0 ml-0 mt--0.5rem',
+        row: 'flex flex-wrap mr-0 ml-0 mt--0.5rem mb--1.25rem',
     },
     rules: [
         [/^m-(\d+)$/, ([, d]) => ({ margin: `${Number(d) / 4}rem` })],

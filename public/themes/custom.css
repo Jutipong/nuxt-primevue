@@ -1,3 +1,17 @@
 .p-fluid.field label {
     margin-bottom: 0rem !important;
 }
+
+.p-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+}
+
+.p-button.p-button-sm {
+    font-size: 0.85rem;
+    padding: 0.42rem 0.85rem;
+}
+
+.p-button.p-button-sm .p-button-icon {
+    font-size: 0.85rem;
+}
