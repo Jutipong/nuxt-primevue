@@ -1,5 +1,4 @@
 // uno.config.ts
-import { test } from '@antfu/eslint-config'
 import {
     defineConfig,
     presetAttributify,
