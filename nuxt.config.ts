@@ -2,7 +2,7 @@ export default defineNuxtConfig({
     $development: {
         app: {
             head: {
-                title: 'DEV | Nuxt PrimeVue',
+                title: 'DEV',
             },
         },
     },
@@ -30,8 +30,11 @@ export default defineNuxtConfig({
             ],
         },
     },
-    // typescript: {
-    //   typeCheck: true
+    // ssr: false,
+    // hooks: {
+    //     'prerender:routes': async ({ routes }) => {
+    //         routes.clear()
+    //     },
     // },
     devtools: { enabled: true },
     modules: [
