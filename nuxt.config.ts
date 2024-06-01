@@ -1,4 +1,11 @@
 export default defineNuxtConfig({
+    $development: {
+        app: {
+            head: {
+                title: 'DEV | Nuxt PrimeVue',
+            },
+        },
+    },
     app: {
         head: {
             title: 'Nuxt PrimeVue',
