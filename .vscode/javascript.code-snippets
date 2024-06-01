@@ -7,6 +7,14 @@
 		],
 		"description": "Log output to console"
 	},
+	"console.table": {
+		"scope": "javascript,typescript",
+		"prefix": "ct",
+		"body": [
+			"console.table($1);",
+		],
+		"description": "Log output to console"
+	},
 	"debugger": {
 		"scope": "javascript,typescript",
 		"prefix": "de",
