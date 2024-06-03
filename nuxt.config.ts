@@ -42,10 +42,11 @@ export default defineNuxtConfig({
         '@unocss/nuxt',
     ],
     primevue: {
-        options: { ripple: true },
+        options: {
+            ripple: true,
+        },
         components: {
             exclude: ['Editor', 'ColorPicker', 'Galleria', 'Chart'],
-
         },
     },
     css: [

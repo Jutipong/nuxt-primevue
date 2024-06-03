@@ -1,33 +1,41 @@
 <script lang="ts" setup>
-const toggleable = ref(false)
-const statusOptions = ref([
-    { name: 'Active', code: true },
-    { name: 'InActive', code: false },
-])
-
-const state = ref({
-    name: null,
-    status: null,
+const state = reactive({
+    data: {
+        name: null,
+        status: null,
+        city: null,
+        start: null,
+        end: null,
+    },
+    control: {
+        toggleable: false,
+    },
+    option: {
+        state: [
+            { name: 'Active', code: true },
+            { name: 'InActive', code: false },
+        ],
+        city: [
+            { name: 'New York', code: 'NY' },
+            { name: 'Rome', code: 'RM' },
+            { name: 'London', code: 'LDN' },
+            { name: 'Istanbul', code: 'IST' },
+            { name: 'Paris', code: 'PRS' },
+        ],
+    },
 })
 
-const selectedCities = ref()
-const cities = ref([
-    { name: 'New York', code: 'NY' },
-    { name: 'Rome', code: 'RM' },
-    { name: 'London', code: 'LDN' },
-    { name: 'Istanbul', code: 'IST' },
-    { name: 'Paris', code: 'PRS' },
-])
-
-function toggle() {
-    toggleable.value = !toggleable.value
+const func = {
+    toggle: () => {
+        state.control.toggleable = !state.control.toggleable
+    },
 }
 </script>
 
 <template>
     <div class="row">
         <div class="col-12">
-            <Panel toggleable :collapsed="toggleable" @toggle="toggle">
+            <Panel toggleable :collapsed="state.control.toggleable" @toggle="func.toggle">
                 <!-- <template #header>
                     <div class="flex align-items-center gap-1">
                         <Button
@@ -47,7 +55,7 @@ function toggle() {
                             <div class="grid p-fluid field">
                                 <label for="name" class="col-12 md:col-2">Name</label>
                                 <div class="col-12 md:col-10">
-                                    <InputText id="name" v-model="state.name" type="search" />
+                                    <InputText id="name" v-model="state.data.name" type="search" />
                                 </div>
                             </div>
                         </div>
@@ -57,9 +65,9 @@ function toggle() {
                                 <label for="statue" class="col-12 md:col-2">Statue</label>
                                 <div class="col-12 md:col-10">
                                     <Dropdown
-                                        v-model="state.status"
+                                        v-model="state.data.status"
                                         option-value="code"
-                                        :options="statusOptions"
+                                        :options="state.option.state"
                                         show-clear
                                         option-label="name"
                                     />
@@ -75,7 +83,7 @@ function toggle() {
                                 <div class="col-12 md:col-10">
                                     <InputText
                                         id="name"
-                                        v-model="state.name"
+                                        v-model="state.data.name"
                                         autocapitalize="off"
                                         type="search"
                                     />
@@ -88,14 +96,46 @@ function toggle() {
                                 <label for="city" class="col-12 md:col-2">City</label>
                                 <div class="col-12 md:col-10">
                                     <MultiSelect
-                                        v-model="selectedCities"
+                                        v-model="state.data.city"
                                         w-full
                                         option-value="code"
-                                        :options="cities"
+                                        :options="state.option.city"
                                         :filter="true"
                                         option-label="name"
                                         placeholder="Select Cities"
                                         display="chip"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 md:col-6 lg:col-6">
+                            <div class="grid p-fluid field">
+                                <label for="start-date" class="col-12 md:col-2">Start</label>
+                                <div class="col-12 md:col-10">
+                                    <Calendar
+                                        v-model="state.data.start"
+                                        date-format="dd/mm/yy"
+                                        :max-date="state.data.end!"
+                                        show-icon icon-display="input"
+                                        show-button-bar
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 md:col-6 lg:col-6">
+                            <div class="grid p-fluid field">
+                                <label for="end-date" class="col-12 md:col-2">End</label>
+                                <div class="col-12 md:col-10">
+                                    <Calendar
+                                        v-model="state.data.end"
+                                        date-format="dd/mm/yy"
+                                        :min-date="state.data.start!"
+                                        show-icon icon-display="input"
+                                        show-button-bar
                                     />
                                 </div>
                             </div>
