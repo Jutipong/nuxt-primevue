@@ -9019,11 +9019,15 @@ defineExpose({
     <div class="row mt-3">
         <div class="col-12">
             <div class="card">
-                <DataTable :value="stateMock.customers" paginator :rows="5" :rows-per-page-options="[5, 10, 20, 50]" table-style="min-width: 50rem">
-                    <Column field="name" header="Name" style="width: 25%" />
-                    <Column field="country.name" header="Country" style="width: 25%" />
-                    <Column field="company" header="Company" style="width: 25%" />
-                    <Column field="representative.name" header="Representative" style="width: 25%" />
+                <DataTable
+                    :value="stateMock.customers" paginator
+                    :rows="10"
+                    :rows-per-page-options="[10, 20, 30, 40, 50]"
+                >
+                    <Column field="name" header="Name" />
+                    <Column field="country.name" header="Country" />
+                    <Column field="company" header="Company" />
+                    <Column field="representative.name" header="Representative" />
                 </DataTable>
             </div>
         </div>
