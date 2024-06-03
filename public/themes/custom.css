@@ -15,3 +15,7 @@
 .p-button.p-button-sm .p-button-icon {
     font-size: 0.85rem;
 }
+
+.p-panel {
+    border-radius: 12px;
+}
