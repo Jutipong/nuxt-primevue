@@ -10,7 +10,7 @@ export default antfu(
             quotes: 'single',
             semi: false,
             overrides: {
-                // 'no-console': 'off'
+                'no-console': 'off',
                 // 'no-debugger': false,
                 // 'valid-v-slot': 1,
             },
