@@ -69,9 +69,9 @@ function isOutsideClicked(event) {
             <div class="layout-main">
                 <slot />
             </div>
-            <Footer />
+            <!-- <Footer /> -->
         </div>
-        <div class="layout-mask" />
+        <!-- <div class="layout-mask" /> -->
     </div>
     <Toast />
 </template>

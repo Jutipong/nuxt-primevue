@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import type { Ex1Table } from '#build/components'
+import type { ProductTable } from '#build/components'
 import type ProductSearch from '~/types/Product'
 
-const tableEl = ref<ComponentPublicInstance<typeof Ex1Table>>()
+const tableEl = ref<ComponentPublicInstance<typeof ProductTable>>()
 
 const state = reactive({
     data: {} as ProductSearch,
@@ -155,6 +155,6 @@ const func = {
             </div>
         </div>
 
-        <ex1-table ref="tableEl" />
+        <ProductTable ref="tableEl" />
     </div>
 </template>
