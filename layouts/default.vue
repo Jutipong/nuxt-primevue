@@ -1,6 +1,5 @@
 <script setup>
 import Topbar from '~/layouts/default/Topbar.vue'
-import Footer from '~/layouts/default/Footer.vue'
 import Sidebar from '~/layouts/default/Sidebar.vue'
 import { useLayout } from '@/layouts/composables/layout'
 
