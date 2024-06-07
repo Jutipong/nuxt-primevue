@@ -147,8 +147,8 @@ const func = {
 
                     <template #footer>
                         <div class="grid gap-1 justify-end  mr-2">
-                            <Button label="Clear" severity="warning" outlined icon="i-mdi:refresh" @click="func.onClear" />
-                            <Button label="Search" severity="success" icon="i-mdi:magnify" @click="func.onSearch" />
+                            <Button label="Clear" severity="warning" icon="i-mdi:refresh" @click="func.onClear" />
+                            <Button label="Search" severity="primary" icon="i-mdi:magnify" @click="func.onSearch" />
                         </div>
                     </template>
                 </Panel>
