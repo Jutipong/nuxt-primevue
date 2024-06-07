@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { ProductTable } from '#build/components'
-import type ProductSearch from '~/types/Product'
+import type { ProductSearch } from '~/types/Product'
 
 const tableRef = ref<InstanceType<typeof ProductTable>>()
 
@@ -27,13 +27,15 @@ const state = reactive({
 const func = {
     toggle: () => state.control.toggleable = !state.control.toggleable,
     onSearch: () => {
-        tableRef.value!.onSearch(state.data)
+        tableRef.value!.search(state.data)
     },
     onClear: () => {
-        state.data = {} as ProductSearch
-        tableRef.value!.onSearch(state.data)
+        state.data = {}
+        tableRef.value!.search(state.data)
     },
 }
+
+onMounted(() => func.onClear())
 </script>
 
 <template>
