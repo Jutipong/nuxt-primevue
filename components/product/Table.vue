@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { DataTablePageEvent } from 'primevue/datatable'
+import type { DataTablePageEvent, DataTableSortEvent } from 'primevue/datatable'
 import type ProductSearch from '~/types/Product'
 
 const stateMock = reactive({
@@ -18022,8 +18022,8 @@ function onSearch(val: ProductSearch) {
 }
 
 const func = {
-    pageChange: (val: DataTablePageEvent) => {
-        console.log(val)
+    tableChange: (val: DataTablePageEvent) => {
+        console.log('page change', val)
     },
 }
 
@@ -18038,8 +18038,8 @@ defineExpose({ onSearch })
                     paginator
                     v-bind="tableSetting"
                     :value="stateMock.customers"
-                    @page="func.pageChange"
-                    @sort="func.pageChange"
+                    @page="func.tableChange"
+                    @sort="func.tableChange"
                 >
                     <template #header>
                         <div class="flex justify-start">

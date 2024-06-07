@@ -36,7 +36,7 @@ export default defineNuxtConfig({
     //         routes.clear()
     //     },
     // },
-    devtools: { enabled: true },
+    devtools: { enabled: false },
     modules: [
         'nuxt-primevue',
         '@unocss/nuxt',
