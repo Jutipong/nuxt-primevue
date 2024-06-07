@@ -26,16 +26,14 @@ const state = reactive({
 
 const func = {
     toggle: () => state.control.toggleable = !state.control.toggleable,
-    onSearch: () => {
-        tableRef.value!.search(state.data)
-    },
+    onSearch: () => tableRef.value!.search(state.data),
     onClear: () => {
         state.data = {}
         tableRef.value!.search(state.data)
     },
 }
 
-onMounted(() => func.onClear())
+onMounted(() => func.onSearch())
 </script>
 
 <template>
@@ -159,6 +157,7 @@ onMounted(() => func.onClear())
                 </div>
             </div>
         </form>
+
         <ProductTable ref="tableRef" />
     </div>
 </template>
