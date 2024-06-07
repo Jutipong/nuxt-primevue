@@ -105,9 +105,8 @@ function logout(event: any) {
 
         <div class="layout-topbar-menu" :class="topbarMenuClasses">
             <Button
-                hover="animate-shake-x animate-count-infinite animate-duration-4s"
-                outlined
                 severity="danger"
+                hover="animate-shake-x animate-count-infinite animate-duration-4s"
                 icon="pi pi-sign-out"
                 label="Logout"
                 @click="logout($event)"
