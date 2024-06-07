@@ -27,6 +27,9 @@ const func = {
         state.page = event.first ?? 0
         func.search()
     },
+    onEdit: (slotProps: Product) => {
+        console.log(slotProps)
+    },
 }
 
 defineExpose({ search: func.searchPublic })
@@ -55,6 +58,27 @@ defineExpose({ search: func.searchPublic })
                     <Column field="brand" header="BRAND" sortable />
                     <Column field="sku" header="SKU" sortable />
                     <Column field="price" header="PRICE" sortable />
+
+                    <!-- Delete -->
+                    <Column field="price" header="" style="width: 100px">
+                        <template #body="slotProps">
+                            <div class="flex align-items-center gap-2 text-info">
+                                <Button
+                                    text rounded type="button"
+                                    severity="danger"
+                                    icon="i-mdi:delete-outline"
+                                    @click="func.onEdit(slotProps.data as Product)"
+                                />
+
+                                <Button
+                                    text rounded type="button"
+                                    severity="info"
+                                    icon="i-mdi:file-edit-outline"
+                                    @click="func.onEdit(slotProps.data as Product)"
+                                />
+                            </div>
+                        </template>
+                    </Column>
                 </DataTable>
             </div>
         </div>
