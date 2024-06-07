@@ -39,22 +39,9 @@ onMounted(() => func.onSearch())
 <template>
     <div>
         <form @submit.prevent="func.onSearch">
-            <div class="row">
-                <div class="col-12">
+            <div row>
+                <div col-12>
                     <Panel toggleable :collapsed="state.control.toggleable" @toggle="func.toggle">
-                        <!-- <template #header>
-                    <div class="flex align-items-center gap-1">
-                        <Button
-                            class="p-button-sm"
-                            icon="i-mdi:magnify"
-                            severity="primary"
-                            label="Search"
-                            :outlined="!toggleable"
-                            @click="toggle"
-                        />
-                    </div>
-                </template> -->
-
                         <template #default>
                             <div class="row">
                                 <div class="col-12 md:col-6 lg:col-6">
@@ -148,7 +135,7 @@ onMounted(() => func.onSearch())
                         </template>
 
                         <template #footer>
-                            <div class="grid gap-1 justify-end  mr-2">
+                            <div class="grid gap-1 justify-end  mr-3">
                                 <Button type="button" label="Clear" severity="warning" icon="i-mdi:refresh" @click="func.onClear" />
                                 <Button type="submit" label="Search" severity="primary" icon="i-mdi:magnify" />
                             </div>
