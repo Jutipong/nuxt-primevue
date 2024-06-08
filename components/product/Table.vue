@@ -1,8 +1,11 @@
 <script lang="ts" setup>
 import type { DataTablePageEvent, DataTableSortEvent } from 'primevue/datatable'
+import type { ProductActionModal } from '#build/components'
 
 const confirm = useConfirm()
 const toast = useToast()
+
+const modalRef = ref<InstanceType<typeof ProductActionModal>>()
 
 const state = reactive({
     search: {} as ProductSearch,
@@ -29,8 +32,11 @@ const func = {
         state.page = event.first ?? 0
         func.search()
     },
-    onEdit: (slotProps: Product) => {
-        console.log(slotProps)
+    onEdit: (val: Product) => {
+        modalRef.value!.open(val)
+    },
+    onAdd: () => {
+        modalRef.value!.open({} as Product)
     },
     onDelete: (event: Event, product: Product) => {
         confirm.require({
@@ -52,9 +58,6 @@ defineExpose({ search: func.searchPublic })
 </script>
 
 <template>
-    <Toast />
-    <ConfirmPopup />
-
     <div row mt-3>
         <div col-12>
             <Card>
@@ -70,7 +73,7 @@ defineExpose({ search: func.searchPublic })
                     >
                         <template #header>
                             <div class="flex justify-start">
-                                <Button type="button" icon="pi pi-plus" severity="success" label="Add" />
+                                <Button type="button" icon="pi pi-plus" severity="success" label="Add" @click="func.onAdd" />
                             </div>
                         </template>
 
@@ -108,4 +111,6 @@ defineExpose({ search: func.searchPublic })
             </Card>
         </div>
     </div>
+
+    <ProductActionModal ref="modalRef" />
 </template>

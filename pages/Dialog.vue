@@ -17,7 +17,7 @@ function openPosition(pos: any) {
         <div class="col-12">
             <div class="card flex justify-content-center">
                 <Button label="Show" @click="visible1 = true" />
-                <Dialog v-model:visible="visible1" modal header="Edit Profile" :style="{ width: '25rem' }">
+                <Dialog :visible="visible1" modal header="Edit Profile 1" :style="{ width: '25rem' }">
                     <span class="p-text-secondary block mb-5">Update your information.</span>
                     <div class="flex align-items-center gap-3 mb-3">
                         <label for="username" class="font-semibold w-6rem">Username</label>
@@ -49,7 +49,7 @@ function openPosition(pos: any) {
                         <Button label="BottomRight" icon="pi pi-arrow-up-left" severity="secondary" style="min-width: 10rem" @click="openPosition('bottomright')" />
                     </div>
 
-                    <Dialog v-model:visible="visible" header="Edit Profile" :style="{ width: '25rem' }" :position="position" :modal="true" :draggable="false">
+                    <Dialog v-model:visible="visible" header="Edit Profile 2" :style="{ width: '25rem' }" :position="position" :modal="true" :draggable="false">
                         <span class="p-text-secondary block mb-5">Update your information.</span>
                         <div class="flex align-items-center gap-3 mb-3">
                             <label for="username" class="font-semibold w-6rem">Username</label>
