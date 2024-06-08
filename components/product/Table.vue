@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { DataTablePageEvent, DataTableSortEvent } from 'primevue/datatable'
-import type { Product, ProductSearch } from '~/types/Product'
 
 const confirm = useConfirm()
 const toast = useToast()

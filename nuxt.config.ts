@@ -37,6 +37,9 @@ export default defineNuxtConfig({
     //     },
     // },
     devtools: { enabled: false },
+    imports: {
+        dirs: ['types/*.ts', 'store/*.ts', 'types/**/*.ts'],
+    },
     modules: [
         'nuxt-primevue',
         '@unocss/nuxt',
