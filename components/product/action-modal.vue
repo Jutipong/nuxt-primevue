@@ -5,7 +5,7 @@ const state = reactive({
     product: {} as Product,
 })
 
-const header = computed(() => state.product ? 'Edit Product' : 'Add Product')
+const header = computed(() => isEmpty(state.product) ? 'Add Product' : 'Edit Product')
 
 function open(val: Product) {
     state.product = val

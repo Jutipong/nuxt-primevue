@@ -14,6 +14,7 @@
   "dependencies": {
     "@unocss/nuxt": "^0.60.4",
     "nuxt": "^3.11.2",
+    "nuxt-lodash": "^2.5.3",
     "nuxt-primevue": "^3.0.0",
     "primeflex": "^3.3.1",
     "primeicons": "^7.0.0",

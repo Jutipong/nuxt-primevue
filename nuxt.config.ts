@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+
     $development: {
         app: {
             head: {
@@ -40,10 +41,7 @@ export default defineNuxtConfig({
     imports: {
         dirs: ['types/*.ts', 'store/*.ts', 'types/**/*.ts'],
     },
-    modules: [
-        'nuxt-primevue',
-        '@unocss/nuxt',
-    ],
+    modules: ['nuxt-primevue', '@unocss/nuxt', 'nuxt-lodash'],
     primevue: {
         options: {
             ripple: true,

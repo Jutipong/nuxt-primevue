@@ -98,6 +98,7 @@ defineExpose({ search: func.searchPublic })
                                     />
 
                                     <Button
+                                        v-tooltip="{ value: 'Confirm to proceed', showDelay: 1000, hideDelay: 300 }"
                                         text rounded type="button"
                                         severity="info"
                                         icon="i-mdi:file-edit-outline"
