@@ -1,3 +1,5 @@
+import locale_en from './utils/locale/en'
+
 export default defineNuxtConfig({
 
     $development: {
@@ -45,6 +47,7 @@ export default defineNuxtConfig({
     primevue: {
         options: {
             ripple: true,
+            locale: locale_en,
         },
         components: {
             exclude: ['Editor', 'ColorPicker', 'Galleria', 'Chart'],
