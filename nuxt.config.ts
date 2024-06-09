@@ -39,7 +39,7 @@ export default defineNuxtConfig({
     // },
     devtools: { enabled: false },
     imports: {
-        dirs: ['types/*.ts', 'store/*.ts', 'types/**/*.ts'],
+        dirs: ['types/*.ts', 'types/**/*.ts', 'store/*.ts', 'store/**/*.ts', 'utils/*.ts', 'utils/**/*.ts', 'services/*.ts', 'services/**/*.ts', 'components/*.ts', 'components/**/*.ts', 'layouts/*.ts', 'layouts/**/*.ts', 'pages/*.ts', 'pages/**/*.ts'],
     },
     modules: ['nuxt-primevue', '@unocss/nuxt', 'nuxt-lodash'],
     primevue: {

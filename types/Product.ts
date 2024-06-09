@@ -1,8 +1,8 @@
 export interface ProductSearch {
-    name?: string | null
-    last?: string | null
+    brand?: string | null
+    sku?: string | null
     status?: string | null
-    city?: string[] | null
+    tags?: string[] | null
     start?: Date | null
     end?: Date | null
 }
