@@ -80,9 +80,9 @@ defineExpose({ search: func.searchPublic })
                 <Column field="sku" header="SKU" sortable />
                 <Column field="price" header="PRICE" sortable />
                 <!-- Edit, Delete -->
-                <Column field="price" header="" style="width: 100px">
+                <Column id="action-col" header="Action" style="width: 100px" header-class="flex justify-center">
                     <template #body="slotProps">
-                        <div class="flex align-items-center gap-2 text-info">
+                        <div class="flex align-items-center gap-1 text-info">
                             <Button
                                 text rounded type="button"
                                 severity="danger"
@@ -105,3 +105,14 @@ defineExpose({ search: func.searchPublic })
 
     <ProductModal ref="modalRef" />
 </template>
+
+<style scoped>
+/* table th :nth-child(5) > .p-column-header-content {
+    display: flex;
+    justify-content: center;
+}
+#xx > * > .child {
+    display: flex;
+    justify-content: center;
+} */
+</style>
