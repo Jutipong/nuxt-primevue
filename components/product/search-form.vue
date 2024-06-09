@@ -107,7 +107,6 @@ onMounted(() => func.onSearch())
                             <div class="col-12 md:col-10">
                                 <Calendar
                                     v-model="state.data.start"
-                                    date-format="dd/mm/yy"
                                     :max-date="state.data.end!"
                                     show-icon icon-display="input"
                                     show-button-bar
@@ -122,7 +121,6 @@ onMounted(() => func.onSearch())
                             <div class="col-12 md:col-10">
                                 <Calendar
                                     v-model="state.data.end"
-                                    date-format="dd/mm/yy"
                                     :min-date="state.data.start!"
                                     show-icon icon-display="input"
                                     show-button-bar

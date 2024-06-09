@@ -54,8 +54,15 @@ defineExpose({ open, close })
                     <label class="col-12 md:col-2">Price</label>
                     <div class="col-12 md:col-10">
                         <InputGroup>
-                            <InputNumber v-model="state.product.price" />
-                            <InputGroupAddon>$</InputGroupAddon>
+                            <InputNumber
+                                v-model="state.product.price"
+                                :min-fraction-digits="2"
+                                :max-fraction-digits="2"
+                                suffix=" THB"
+                            />
+                            <InputGroupAddon>
+                                <i i-mdi:cash />
+                            </InputGroupAddon>
                         </InputGroup>
                     </div>
                 </div>
