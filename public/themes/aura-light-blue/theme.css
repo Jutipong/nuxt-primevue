@@ -7255,7 +7255,6 @@
     .p-panel .p-panel-footer {
         /* padding: 0 1.125rem 1.125rem 1.125rem; */
         padding: 0 1.5rem 1.5rem 1.5rem;
-        margin-right: 1rem;
         border: 1px solid #e2e8f0;
         background: #ffffff;
         color: #334155;
@@ -8171,7 +8170,6 @@
         gap: 0.5rem;
         border-bottom-right-radius: 6px;
         border-bottom-left-radius: 6px;
-        margin-right: 1rem;
     }
 
     .p-dialog.p-confirm-dialog .p-confirm-dialog-icon {
@@ -13808,8 +13806,7 @@
     }
 
     .p-panel:has(.p-panel-footer) .p-panel-content {
-        /* padding-bottom: 0.875rem; */
-        padding-bottom: 1rem;
+        padding-bottom: 0.875rem;
     }
 
     .p-picklist-buttons .p-button {

@@ -12,7 +12,7 @@ import {
 export default defineConfig({
     shortcuts: {
         'grid': 'flex flex-wrap mr-0 ml-0 mt--0.5rem',
-        'btn-footer': 'flex flex-wrap mt-0.5rem mb-0.5rem mr-1rem ml-1rem justify-end gap-1',
+        'btn-footer': 'flex flex-wrap mt-0rem mb-0rem mr-1rem ml-1rem justify-end gap-1',
         'row': 'flex flex-wrap mr-0 ml-0 mt--0.5rem mb--1.25rem',
     },
     rules: [
