@@ -19,3 +19,7 @@
 .p-panel {
     border-radius: 12px;
 }
+
+.field {
+    margin-bottom: 0rem !important;
+}

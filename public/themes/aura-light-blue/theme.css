@@ -7254,7 +7254,7 @@
 
     .p-panel .p-panel-footer {
         /* padding: 0 1.125rem 1.125rem 1.125rem; */
-        padding: 0 1.5rem 1.5rem 1.5rem;
+        padding: 0 1rem 1rem 1rem;
         border: 1px solid #e2e8f0;
         background: #ffffff;
         color: #334155;
@@ -8164,7 +8164,7 @@
         border-top: 0 none;
         background: #ffffff;
         color: #334155;
-        padding: 0 1.5rem 1.5rem 1.5rem;
+        padding: 0 1rem 1rem 1rem;
         display: flex;
         justify-content: flex-end;
         gap: 0.5rem;
