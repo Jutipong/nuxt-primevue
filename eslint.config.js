@@ -21,6 +21,7 @@ export default antfu(
         ignores: [
             '**/fixtures',
         ],
+        jsonc: false,
         formatters: {
             css: true,
             html: true,
