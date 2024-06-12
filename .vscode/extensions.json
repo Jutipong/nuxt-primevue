@@ -13,7 +13,6 @@
         "antfu.unocss",
         "yoavbls.pretty-ts-errors",
         "antfu.iconify",
-        "nuxtr.nuxtr-vscode",
         "vue.volar"
     ]
 }
