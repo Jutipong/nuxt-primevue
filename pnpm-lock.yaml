@@ -18,8 +18,8 @@ importers:
         specifier: ^2.5.3
         version: 2.5.3(rollup@4.18.0)
       nuxt-primevue:
-        specifier: ^3.0.0
-        version: 3.0.0(rollup@4.18.0)(vue@3.4.31(typescript@5.4.5))
+        specifier: 4.0.0-beta.4
+        version: 4.0.0-beta.4(magicast@0.3.4)(rollup@4.18.0)(vue@3.4.31(typescript@5.4.5))
       primeflex:
         specifier: ^3.3.1
         version: 3.3.1
@@ -3406,8 +3406,8 @@ packages:
   nuxt-lodash@2.5.3:
     resolution: {integrity: sha512-LCJ40tGQTHkfk8rQoGqtb0mFgRVt8U+pc3S352DsI39yF3olqgxlsm28wdJMIcWHuxLgf5X+DwxmZhrAHXNS5g==}
 
-  nuxt-primevue@3.0.0:
-    resolution: {integrity: sha512-MC3ubLTF0hzUEsQ2gYzzlzaW1gXN9/wrpbWnS9xwK47TWw1gcfim8idu5mcOx+l66CPAtTLOR1QJahkDc4m9XA==}
+  nuxt-primevue@4.0.0-beta.4:
+    resolution: {integrity: sha512-d/Y4diuT45QXedjuPSkO/QusBlepAeJ1zBYIgcGTGvoqTcw/Q3m/F+2+BCns9mbD4AGesK2rSh/8LMB4GaZTgw==}
 
   nuxt@3.12.3:
     resolution: {integrity: sha512-Qdkc+ucWwFcKsiL/OTF87jbgyFSymwPRKiiu0mvzsd/RXTn4hGiBduAlF3f7Yy0F9pDjSj8XHKDSnHYsDzm6rA==}
@@ -3800,6 +3800,12 @@ packages:
 
   primevue@3.53.0:
     resolution: {integrity: sha512-mRqTPGGZX+3AQokaCCjxLVSNEjGEA7LaPdBT4qSpGEdMstK6vhUBCxgLH7IPjHudbaSi4Xo3CIO62pXQxbz8dQ==}
+    peerDependencies:
+      vue: ^3.0.0
+
+  primevue@4.0.0-beta.4:
+    resolution: {integrity: sha512-5ziY7gr1tRmCpK8LSAYgfdOyljLbHoxs2LCOTApB5jMZeAOeFRdIRHfUtCCLevX84azQJn+Bac8g43OCIzutlA==}
+    engines: {node: '>=12.11.0'}
     peerDependencies:
       vue: ^3.0.0
 
@@ -8548,12 +8554,13 @@ snapshots:
       - rollup
       - supports-color
 
-  nuxt-primevue@3.0.0(rollup@4.18.0)(vue@3.4.31(typescript@5.4.5)):
+  nuxt-primevue@4.0.0-beta.4(magicast@0.3.4)(rollup@4.18.0)(vue@3.4.31(typescript@5.4.5)):
     dependencies:
-      '@nuxt/kit': 3.12.1(rollup@4.18.0)
+      '@nuxt/kit': 3.12.3(magicast@0.3.4)(rollup@4.18.0)
       pathe: 1.1.2
-      primevue: 3.53.0(vue@3.4.31(typescript@5.4.5))
+      primevue: 4.0.0-beta.4(vue@3.4.31(typescript@5.4.5))
     transitivePeerDependencies:
+      - magicast
       - rollup
       - supports-color
       - vue
@@ -9031,6 +9038,10 @@ snapshots:
   primeicons@7.0.0: {}
 
   primevue@3.53.0(vue@3.4.31(typescript@5.4.5)):
+    dependencies:
+      vue: 3.4.31(typescript@5.4.5)
+
+  primevue@4.0.0-beta.4(vue@3.4.31(typescript@5.4.5)):
     dependencies:
       vue: 3.4.31(typescript@5.4.5)
 
